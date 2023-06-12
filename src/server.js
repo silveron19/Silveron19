@@ -14,7 +14,6 @@ require('dotenv').config();
 console.clear();
 const init = async () => {
   const notesService = new NotesService();
-  const usersService = new UsersService();
 
   const server = Hapi.server({
     port: process.env.PORT,
@@ -26,22 +25,13 @@ const init = async () => {
     },
   });
 
-  await server.register([
-    {
-      plugin: notes,
-      options: {
-        service: notesService,
-        validator: NotesValidator,
-      },
+  await server.register({
+    plugin: notes,
+    options: {
+      service: notesService,
+      validator: NotesValidator,
     },
-    {
-      plugin: users,
-      options: {
-        service: usersService,
-        validator: UsersValidator,
-      },
-    },
-  ]);
+  });
 
   await server.start();
   console.log(`Server sedang berjalan pada ${server.info.uri}`);
