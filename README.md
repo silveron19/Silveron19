@@ -1,6 +1,6 @@
 - 👋 Hi, I’m @Silveron19
 - 👀 I’m interested in Coding
-- 🌱 I’m currently learning C/C++ and Python
+- 🌱 I’m learn everything
 - 💞️ I’m looking to collaborate on (Not yet)
 - 📫 How to reach me (I don't know :v)
 
